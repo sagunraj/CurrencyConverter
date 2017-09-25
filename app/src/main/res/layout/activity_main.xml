@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="np.com.sagunrajlage.currencyconverter.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:scaleType="centerInside"
+        app:srcCompat="@mipmap/image"
+        android:layout_below="@+id/userAmountEditText"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/userAmountEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="59dp"
+        android:ems="10"
+        android:hint="Enter the numeric value"
+        android:inputType="number"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/usdtonpr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:onClick="converttonpr"
+        android:text="Convert to NPR"
+        android:layout_marginStart="57dp"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/nprtousd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/usdtonpr"
+        android:layout_alignBottom="@+id/usdtonpr"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@+id/usdtonpr"
+        android:onClick="converttousd"
+        android:text="Convert to USD" />
+
+</android.widget.RelativeLayout>
